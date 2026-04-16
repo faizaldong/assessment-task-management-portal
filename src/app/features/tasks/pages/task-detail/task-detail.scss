@@ -1,0 +1,15 @@
+.container {
+  padding: 16px;
+}
+
+.task-image {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .task-image {
+    max-height: 180px;
+  }
+}

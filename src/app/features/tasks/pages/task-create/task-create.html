@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h2>Create Task</h2>
+
+  <mat-horizontal-stepper linear>
+
+    <!-- STEP 1 -->
+    <mat-step [stepControl]="taskInfoForm">
+      <form [formGroup]="taskInfoForm">
+        <ng-template matStepLabel>Task Information</ng-template>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Task Name</mat-label>
+          <input matInput formControlName="taskName" />
+          <mat-error *ngIf="taskInfoForm.controls.taskName.hasError('required')">
+            Required
+          </mat-error>
+          <mat-error *ngIf="taskInfoForm.controls.taskName.hasError('minlength')">
+            Minimum 3 characters
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Priority</mat-label>
+          <mat-select formControlName="priority">
+            <mat-option value="Low">Low</mat-option>
+            <mat-option value="Medium">Medium</mat-option>
+            <mat-option value="High">High</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-button matStepperNext>Next</button>
+      </form>
+    </mat-step>
+
+    <!-- STEP 2 -->
+    <mat-step [stepControl]="assignmentForm">
+      <form [formGroup]="assignmentForm">
+        <ng-template matStepLabel>Assignment Details</ng-template>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Assigned To</mat-label>
+          <input matInput formControlName="assignedTo" />
+        </mat-form-field>
+
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </form>
+    </mat-step>
+
+    <!-- STEP 3 -->
+    <mat-step>
+      <ng-template matStepLabel>Review & Submit</ng-template>
+
+      <p><strong>Task:</strong> {{ taskInfoForm.value.taskName }}</p>
+      <p><strong>Priority:</strong> {{ taskInfoForm.value.priority }}</p>
+      <p><strong>Assigned To:</strong> {{ assignmentForm.value.assignedTo }}</p>
+
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-raised-button color="primary" (click)="submit()">
+        Submit
+      </button>
+    </mat-step>
+
+  </mat-horizontal-stepper>
+</div>

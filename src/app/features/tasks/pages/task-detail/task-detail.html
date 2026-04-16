@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+@if (task(); as t) {
+  <div class="container">
+    <mat-card>
+
+      <img
+        mat-card-image
+        [src]="t.imageUrl"
+        alt="Task Image"
+        class="task-image"
+      />
+
+      <mat-card-title>{{ t.name }}</mat-card-title>
+      <mat-card-subtitle>
+        {{ t.status }} • {{ t.assignedTo }}
+      </mat-card-subtitle>
+
+      <mat-accordion>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Task Details</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <p><strong>Priority:</strong> {{ t.priority }}</p>
+          <p><strong>Description:</strong> {{ t.description }}</p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Additional Info</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <p><strong>Created:</strong> {{ t.details.createdDate }}</p>
+          <p><strong>Due:</strong> {{ t.details.dueDate }}</p>
+          <p><strong>Notes:</strong> {{ t.details.notes }}</p>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+
+    </mat-card>
+  </div>
+} @else {
+  <p style="padding:16px;">Loading t...</p>
+}

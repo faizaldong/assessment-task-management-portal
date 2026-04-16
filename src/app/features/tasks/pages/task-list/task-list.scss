@@ -1,0 +1,19 @@
+.container {
+  padding: 16px;
+}
+
+table {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.low { color: green; }
+.medium { color: orange; }
+.high { color: red; font-weight: bold; }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+  }
+}

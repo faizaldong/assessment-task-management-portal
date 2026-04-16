@@ -1,0 +1,41 @@
+{
+  "auth": {
+    "users": [
+      {
+        "username": "admin",
+        "password": "Admin@123",
+        "displayName": "Admin User",
+        "avatarUrl": "https://randomuser.me/api/portraits/men/32.jpg"
+      }
+    ]
+  },
+  "uiConfig": {
+    "toasts": {
+      "loginSuccess": "Login successful",
+      "loginError": "Invalid username or password",
+      "taskCreated": "Task created successfully",
+      "validationError": "Please fix validation errors"
+    },
+    "steps": [
+      "Task Information",
+      "Assignment Details",
+      "Review & Submit"
+    ]
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Design Login Screen",
+      "status": "In Progress",
+      "assignedTo": "John Doe",
+      "priority": "High",
+      "description": "Create responsive login screen with validation",
+      "imageUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300&h=200&fit=crop",
+      "details": {
+        "createdDate": "2026-03-01",
+        "dueDate": "2026-03-10",
+        "notes": "Ensure mobile-first design"
+      }
+    }
+  ]
+}

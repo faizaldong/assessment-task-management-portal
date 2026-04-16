@@ -1,59 +1,129 @@
-# TaskManagementPortal
+```mermaid
+flowchart TD
+    A[Login Component] --> B[Auth Facade]
+    B --> C[NgRx Store]
+    C --> D[Auth Effects]
+    D --> E[Auth Service]
+    E --> F[Mock API JSON]
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+    C --> G[Selectors]
+    G --> H[Facade Signals]
+    H --> A
 
-## Development server
+    A --> I[Router]
+    I --> J[Dashboard]
 
-To start a local development server, run:
+    J --> K[Task Facade]
+    K --> L[Task Store]
+    L --> M[Task Effects]
+    M --> N[Task Service]
+
+
+:::writing{variant="standard" id="readme001"}
+# 🧾 Task Management Portal
+
+## 📌 Overview
+This project is a **Simple Task Management Portal** built using **Angular 21**, following modern best practices and scalable architecture.
+
+The application includes:
+- Authentication (Login)
+- Responsive Dashboard
+- Task Management (List, Detail, Create)
+- Stepper-based Task Creation
+- Toast Notifications
+
+---
+
+## 🚀 Tech Stack
+
+- Angular 21 (Standalone Components)
+- NgRx (Store, Effects, Facade Pattern)
+- Angular Signals
+- RxJS
+- Angular Material UI
+
+---
+
+## 🧠 Architecture Highlights
+
+- **SPA (Single Page Application)**
+- **Feature-based modular structure**
+- **Lazy-loaded routes**
+- **Facade Pattern (decouples UI from NgRx)**
+- **Signals for reactive UI**
+- **Centralized HTTP handling**
+- **Mock API using JSON**
+
+---
+
+## 🔐 Authentication
+
+- Mock authentication using JSON data
+- AuthGuard protects secured routes
+- Redirects unauthenticated users to login
+
+---
+
+## 📊 Features Implemented
+
+### ✅ Login
+- Form validation
+- Error handling
+- Toast notifications
+
+### ✅ Dashboard
+- Responsive layout
+- Navigation bar
+
+### ✅ Task List
+- Material table
+- View & Edit actions
+
+### ✅ Task Detail
+- Image display
+- Collapsible sections
+
+### ✅ Task Creation
+- Stepper (wizard)
+- Validation
+- Success notification
+
+---
+
+## 📦 Installation
 
 ```bash
+npm install
+
+▶️ Run Application
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to:
+http://localhost:4200
 
-## Code scaffolding
+🔑 Demo Credentials
+Username: admin
+Password: Admin@123
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+📁 Folder Structure
+core/ → Services, guards, models
+shared/ → Reusable UI components
+store/ → NgRx state management
+features/ → Feature modules (auth, tasks, dashboard)
 
-```bash
-ng generate component component-name
-```
+⚡ Performance Considerations
+OnPush change detection
+Lazy loading
+Signals instead of manual subscriptions
+Clean state management via NgRx
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+⚡ Performance Considerations
+OnPush change detection
+Lazy loading
+Signals instead of manual subscriptions
+Clean state management via NgRx
 
-```bash
-ng generate --help
-```
+📌 Notes
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is designed with scalability, maintainability, and performance in mind, following enterprise-level Angular architecture.
+:::

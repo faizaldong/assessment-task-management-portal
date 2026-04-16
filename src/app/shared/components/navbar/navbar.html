@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <span class="logo">Task Portal</span>
+
+  <span class="spacer"></span>
+
+  <span *ngIf="user() as user">
+    {{ user.displayName }}
+  </span>
+
+  <button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>

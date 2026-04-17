@@ -1,5 +1,5 @@
 ## 🧠 Architecture Diagram
-![Architecture](assets/mermaid-diagram.png)
+![Architecture](src/assets/mermaid-diagram.png)
 
 # 🧾 Task Management Portal
 

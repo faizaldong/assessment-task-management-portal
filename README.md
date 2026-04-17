@@ -1,3 +1,5 @@
+## 🧠 Architecture Diagram
+
 ```mermaid
 flowchart TD
     A[Login Component] --> B[Auth Facade]
@@ -18,8 +20,6 @@ flowchart TD
     L --> M[Task Effects]
     M --> N[Task Service]
 
----
-:::writing{variant="standard" id="readme001"}
 # 🧾 Task Management Portal
 
 ## 📌 Overview

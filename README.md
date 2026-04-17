@@ -1,6 +1,6 @@
 
 # 🧾 Task Management Portal
-![App Screenshot](assets/mermaid-diagram.png)
+<img src="assets/mermaid-diagram.png" width="600"/>
 
 ## 📌 Overview
 This project is a **Simple Task Management Portal** built using **Angular 21**, following modern best practices and scalable architecture.

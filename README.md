@@ -1,26 +1,6 @@
-## 🧠 Architecture Diagram
-
-```mermaid
-flowchart TD
-    A[Login Component] --> B[Auth Facade]
-    B --> C[NgRx Store]
-    C --> D[Auth Effects]
-    D --> E[Auth Service]
-    E --> F[Mock API JSON]
-
-    C --> G[Selectors]
-    G --> H[Facade Signals]
-    H --> A
-
-    A --> I[Router]
-    I --> J[Dashboard]
-
-    J --> K[Task Facade]
-    K --> L[Task Store]
-    L --> M[Task Effects]
-    M --> N[Task Service]
 
 # 🧾 Task Management Portal
+![App Screenshot](assets/mermaid-diagram.png)
 
 ## 📌 Overview
 This project is a **Simple Task Management Portal** built using **Angular 21**, following modern best practices and scalable architecture.

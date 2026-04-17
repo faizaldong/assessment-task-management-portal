@@ -18,7 +18,7 @@ flowchart TD
     L --> M[Task Effects]
     M --> N[Task Service]
 
-
+---
 :::writing{variant="standard" id="readme001"}
 # 🧾 Task Management Portal
 
